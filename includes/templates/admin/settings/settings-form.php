@@ -6,21 +6,21 @@
  * It includes settings fields, sections, and a "Save Settings" button for user interaction.
  *
  * @package GatherPress\Core
- * @param string $page The slug of the current settings page.
- * @since 1.0.0
+ * @param   string $page The slug of the current settings page.
+ * @since   1.0.0
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit; // @codeCoverageIgnore
+defined('ABSPATH') || exit; // @codeCoverageIgnore
 
-if ( ! isset( $page ) ) {
-	return;
+if (! isset($page) ) {
+    return;
 }
 ?>
 
 <form method="post" action="options.php">
-	<?php settings_fields( $page ); ?>
-	<?php do_settings_sections( $page ); ?>
+    <?php settings_fields($page); ?>
+    <?php do_settings_sections($page); ?>
 
-	<?php submit_button( __( 'Save Settings', 'gatherpress' ) ); ?>
+    <?php submit_button(__('Save Settings', 'gatherpress')); ?>
 </form>

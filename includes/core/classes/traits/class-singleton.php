@@ -6,13 +6,13 @@
  * that need to have a single instance throughout the application.
  *
  * @package GatherPress\Core
- * @since 1.0.0
+ * @since   1.0.0
  */
 
 namespace GatherPress\Core\Traits;
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit; // @codeCoverageIgnore
+defined('ABSPATH') || exit; // @codeCoverageIgnore
 
 /**
  * Singleton Trait.
@@ -21,30 +21,32 @@ defined( 'ABSPATH' ) || exit; // @codeCoverageIgnore
  *
  * @since 1.0.0
  */
-trait Singleton {
+trait Singleton
+{
 
-	/**
-	 * The single instance of the class.
-	 *
-	 * @since 1.0.0
-	 * @var self|null The instance of the class or null if not instantiated.
-	 */
-	private static ?self $instance = null;
+    /**
+     * The single instance of the class.
+     *
+     * @since 1.0.0
+     * @var   self|null The instance of the class or null if not instantiated.
+     */
+    private static ?self $instance = null;
 
-	/**
-	 * Get the instance of the Singleton class.
-	 *
-	 * If an instance does not exist, it creates one; otherwise, it returns the existing instance.
-	 *
-	 * @since 1.0.0
-	 *
-	 * @return self The instance of the class.
-	 */
-	public static function get_instance(): self {
-		if ( null === self::$instance ) {
-			self::$instance = new self();
-		}
+    /**
+     * Get the instance of the Singleton class.
+     *
+     * If an instance does not exist, it creates one; otherwise, it returns the existing instance.
+     *
+     * @since 1.0.0
+     *
+     * @return self The instance of the class.
+     */
+    public static function get_instance(): self
+    {
+        if (null === self::$instance ) {
+            self::$instance = new self();
+        }
 
-		return self::$instance;
-	}
+        return self::$instance;
+    }
 }

@@ -6,7 +6,7 @@
  * in GatherPress settings pages.
  *
  * @package GatherPress\Core
- * @since 1.0.0
+ * @since   1.0.0
  *
  * @param string $name        The name attribute for the input field.
  * @param string $label       The label text for the input field.
@@ -17,23 +17,23 @@
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit; // @codeCoverageIgnore
+defined('ABSPATH') || exit; // @codeCoverageIgnore
 
-if ( ! isset( $name, $label, $option, $value, $description, $size ) ) {
-	return;
+if (! isset($name, $label, $option, $value, $description, $size) ) {
+    return;
 }
 
 ?>
 <div class="form-wrap">
-	<label for="<?php echo esc_attr( $option ); ?>"><?php echo esc_html( $label ); ?></label>
-	<input id="<?php echo esc_attr( $option ); ?>" type="text" name="<?php echo esc_attr( $name ); ?>" class="<?php echo esc_attr( $size . '-text' ); ?>" value="<?php echo esc_attr( $value ); ?>" />
-	<?php
-	if ( ! empty( $description ) ) {
-		?>
-		<p class="description"><?php echo wp_kses_post( $description ); ?></p>
-		<?php
-	}
+    <label for="<?php echo esc_attr($option); ?>"><?php echo esc_html($label); ?></label>
+    <input id="<?php echo esc_attr($option); ?>" type="text" name="<?php echo esc_attr($name); ?>" class="<?php echo esc_attr($size . '-text'); ?>" value="<?php echo esc_attr($value); ?>" />
+    <?php
+    if (! empty($description) ) {
+        ?>
+        <p class="description"><?php echo wp_kses_post($description); ?></p>
+        <?php
+    }
 
-	do_action( 'gatherpress_text_after', $name, $value );
-	?>
+    do_action('gatherpress_text_after', $name, $value);
+    ?>
 </div>

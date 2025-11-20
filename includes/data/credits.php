@@ -1,7 +1,7 @@
 <?php
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit; // @codeCoverageIgnore
+defined('ABSPATH') || exit; // @codeCoverageIgnore
 
 return array (
   'version' => '0.31.0-alpha',

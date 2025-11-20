@@ -7,17 +7,17 @@
  * WordPress.org profile.
  *
  * @package GatherPress\Core
- * @param array $gatherpress_contributor An array containing contributor information.
- * @since 1.0.0
+ * @param   array $gatherpress_contributor An array containing contributor information.
+ * @since   1.0.0
  */
 
 // Exit if accessed directly.
-defined( 'ABSPATH' ) || exit; // @codeCoverageIgnore
+defined('ABSPATH') || exit; // @codeCoverageIgnore
 
-if ( ! isset( $gatherpress_contributor, $gatherpress_contributor_end ) ) {
-	return;
+if (! isset($gatherpress_contributor, $gatherpress_contributor_end) ) {
+    return;
 }
 
-$gatherpress_contributor['name'] = ! empty( $gatherpress_contributor['name'] ) ? $gatherpress_contributor['name'] : $gatherpress_contributor['slug'];
+$gatherpress_contributor['name'] = ! empty($gatherpress_contributor['name']) ? $gatherpress_contributor['name'] : $gatherpress_contributor['slug'];
 ?>
-<a id="<?php echo esc_attr( sprintf( 'gatherpress-credit-%s', $gatherpress_contributor['slug'] ) ); ?>" href="<?php echo esc_url( sprintf( 'https://profiles.wordpress.org/%s/', $gatherpress_contributor['slug'] ) ); ?>" target="_blank" rel="noopener"><?php echo esc_html( $gatherpress_contributor['name'] ); ?></a><?php echo esc_html( $gatherpress_contributor_end ); ?>
+<a id="<?php echo esc_attr(sprintf('gatherpress-credit-%s', $gatherpress_contributor['slug'])); ?>" href="<?php echo esc_url(sprintf('https://profiles.wordpress.org/%s/', $gatherpress_contributor['slug'])); ?>" target="_blank" rel="noopener"><?php echo esc_html($gatherpress_contributor['name']); ?></a><?php echo esc_html($gatherpress_contributor_end); ?>
