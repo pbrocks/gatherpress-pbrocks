@@ -25,7 +25,6 @@ nbproject
 
 # Node #
 ##########
-build
 node_modules
 npm-debug.log
 typings
@@ -33,31 +32,10 @@ typings
 # Composer #
 ##########
 vendor
-phpstan.neon
 
 # .wp-env #
 ##########
 wp-core
 .phpunit.result.cache
 coverage.xml
-.env
-.wp-env.override.json
-mu-plugins/
-
-# Playwright #
-##########
-artifacts/
-playwright-report/
-test-results/
-storageState.json
-
-# Jest / SonarCloud #
-##########
-coverage
-test-report.xml
-
-# Claude Code #
-##########
-.claude
-
 *.zip
